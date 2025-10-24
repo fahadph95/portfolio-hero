@@ -18,10 +18,10 @@ function TextureMesh() {
     }
   });
 
-  const aspect = window.innerHeight / window.innerWidth;
+  const aspect = window.innerWidth / window.innerHeight;
   return (
     <mesh ref={mesh} position={[0, 0, 0]}>
-      <planeGeometry args={[2, 2 * aspect]} />
+      <planeGeometry args={[2 * aspect, 2]} />
       <shaderMaterial
         fragmentShader={`
           uniform vec2 u_resolution;
